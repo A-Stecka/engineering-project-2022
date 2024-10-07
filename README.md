@@ -22,4 +22,4 @@ The database and API were deployed with Heroku.
 
 The main branch contains the project documentation. The mobile app can be found in the mobile_app branch. The api branch contains the Python API.
 -
-The project was completed in collaboration with [A. Kłobus](https://github.com/AgnieszkaKlobus12), [B. Tlołka](https://github.com/Boguslawa-Tlolka) and with minimal contributions by [A. Koperwas](https://github.com/olakoperwas).
+This project was completed in collaboration with [A. Kłobus](https://github.com/AgnieszkaKlobus12), [B. Tlołka](https://github.com/Boguslawa-Tlolka) and with minimal contributions by [A. Koperwas](https://github.com/olakoperwas).
