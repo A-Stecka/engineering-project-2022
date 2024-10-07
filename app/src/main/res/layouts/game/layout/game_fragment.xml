@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.game.GameFragment">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/fragment_game_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_game_elements"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_game_exit_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="@dimen/components_margin_small"
+            android:layout_marginVertical="@dimen/components_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <ImageView
+                android:id="@+id/fragment_game_exit_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:contentDescription="@string/exit"
+                app:srcCompat="@drawable/icon_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_game_exit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exit"
+                android:textColor="@color/text_info"
+                android:textStyle="normal"
+                android:layout_marginStart="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fragment_game_exit_icon"
+                app:layout_constraintTop_toTopOf="@id/fragment_game_exit_icon"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_game_exit_icon"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_game_next_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/components_margin_small"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fragment_game_exit_frame">
+
+            <ImageView
+                android:id="@+id/fragment_game_next_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:contentDescription="@string/next_pair"
+                app:srcCompat="@drawable/icon_next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_game_next_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next_pair"
+                android:textColor="@color/text_info"
+                android:textStyle="normal"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_game_next_icon"
+                app:layout_constraintTop_toTopOf="@id/fragment_game_next_icon"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_game_next_icon"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_game_swipe_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/swipe_info"
+            android:layout_marginVertical="@dimen/components_margin"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_next_frame"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_game_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_swipe_info"
+            tools:text="Genre: detective story" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_game_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_genre"
+            tools:text="Prompt: red, sky, axe" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_game_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:textColor="@color/primary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_prompt"
+            tools:text="Written by: test" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/fragment_game_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/components_margin"
+            app:layout_constraintBottom_toTopOf="@id/fragment_game_choice_info"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_author" />
+
+        <TextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_game_choice_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="@string/choice_info"
+            android:layout_margin="@dimen/components_margin"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_view_pager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Theme.ZPI.Chip"
+            android:id="@+id/fragment_game_choice_ai"
+            android:layout_width="@dimen/image_regular"
+            android:layout_height="wrap_content"
+            android:text="@string/ai"
+            android:layout_marginTop="@dimen/components_margin_small"
+            android:layout_marginBottom="@dimen/components_margin_tiny"
+            android:enabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fragment_game_choice_human"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_game_choice_info" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Theme.ZPI.Chip"
+            android:id="@+id/fragment_game_choice_human"
+            android:layout_width="@dimen/image_regular"
+            android:layout_height="wrap_content"
+            android:text="@string/human"
+            android:enabled="true"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_game_choice_ai"
+            app:layout_constraintTop_toTopOf="@id/fragment_game_choice_ai"
+            app:layout_constraintStart_toEndOf="@id/fragment_game_choice_ai"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/fragment_read_back_button"
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:layout_marginTop="@dimen/components_margin"
+            android:layout_marginBottom="@dimen/components_margin_small"
+            android:layout_marginHorizontal="@dimen/components_margin_small"
+            android:contentDescription="@string/back"
+            app:srcCompat="@drawable/icon_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fragment_read_title"
+            style="@style/Theme.ZPI.TextTitle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/components_margin_small"
+            android:layout_marginTop="@dimen/components_margin"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_read_back_button"
+            app:layout_constraintStart_toEndOf="@id/fragment_read_back_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_read_action_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fragment_read_back_button">
+
+            <ImageView
+                android:id="@+id/fragment_read_action_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:layout_marginHorizontal="@dimen/components_margin"
+                android:contentDescription="@string/action_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:src="@drawable/icon_favourites_full"/>
+
+            <TextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_read_action_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_info"
+                android:textStyle="normal"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_read_action_icon"
+                app:layout_constraintTop_toTopOf="@id/fragment_read_action_icon"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_read_action_icon"
+                tools:text="@string/remove_fav_label"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_read_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:textSize="@dimen/standard_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_title"
+            tools:text="Genre: detective story" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_read_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:textSize="@dimen/standard_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_genre"
+            tools:text="Prompt: red, sky, axe" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/fragment_read_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:textSize="@dimen/standard_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_prompt"
+            tools:text="Written by: test" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextTitle"
+            android:id="@+id/fragment_read_story_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:text="@string/original_story"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_author" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_read_action_story_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fragment_read_story_label"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_read_story_label">
+
+            <ImageView
+                android:id="@+id/fragment_read_action_story_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:layout_marginHorizontal="@dimen/components_margin"
+                android:contentDescription="@string/hide"
+                android:src="@drawable/icon_less"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_read_action_story_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hide"
+                android:textColor="@color/text_info"
+                android:textStyle="normal"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_read_action_story_icon"
+                app:layout_constraintTop_toTopOf="@id/fragment_read_action_story_icon"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_read_action_story_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_read_story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:layout_marginTop="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_story_label"
+            tools:text="i am a story a very good story i am very good"/>
+
+        <View
+            android:id="@+id/fragment_read_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:layout_marginTop="@dimen/components_margin_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_story" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextTitle"
+            android:id="@+id/fragment_read_generated_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:text="@string/ai_generated"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_divider" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_read_action_generated_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fragment_read_generated_label"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_read_generated_label">
+
+            <ImageView
+                android:id="@+id/fragment_read_action_generated_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:layout_marginHorizontal="@dimen/components_margin"
+                android:contentDescription="@string/show"
+                android:src="@drawable/icon_more"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_read_action_generated_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/show"
+                android:textColor="@color/text_info"
+                android:textStyle="normal"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_read_action_generated_icon"
+                app:layout_constraintTop_toTopOf="@id/fragment_read_action_generated_icon"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_read_action_generated_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_read_generated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:layout_marginTop="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_generated_label"
+            android:text="@string/ai_generated_not_ready"/>
+
+        <View
+            android:id="@+id/fragment_read_generated_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_light"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            android:layout_marginTop="@dimen/components_margin_small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_generated" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextTitle"
+            android:id="@+id/fragment_read_ai_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:text="@string/ai_analysis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_generated_divider" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_read_action_info_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fragment_read_ai_label"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_read_ai_label">
+
+            <ImageView
+                android:id="@+id/fragment_read_action_info_icon"
+                android:layout_width="36sp"
+                android:layout_height="36sp"
+                android:layout_marginHorizontal="@dimen/components_margin"
+                android:contentDescription="@string/info"
+                android:src="@drawable/icon_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_read_action_info_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info"
+                android:textColor="@color/text_info"
+                android:textStyle="normal"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fragment_read_action_info_icon"
+                app:layout_constraintTop_toTopOf="@id/fragment_read_action_info_icon"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_read_action_info_icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_read_ai_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin_tiny"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_label" >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_read_ai_content_not_ready"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ai_analysis_not_ready"
+                android:layout_marginBottom="@dimen/components_margin_small"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_read_ai_divider" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fragment_read_ai_elements"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/components_margin_small"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_read_ai_divider" >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_genre_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_genre"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginBottom="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_genre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_genre_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_genre_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_compatibility_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_genre_compatibility"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_genre" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_compatibility"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_compatibility_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_compatibility_label"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_completion_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_completion"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_compatibility" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_completion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_completion_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_completion_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_correctness_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_correctness"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_completion" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_correctness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_correctness_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_correctness_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_variety_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_vocab_variety"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_correctness" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_variety"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_variety_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_variety_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_positiveness_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_positiveness"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_variety" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_positiveness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_positiveness_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_positiveness_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_negativeness_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_negativeness"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_positiveness" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_negativeness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_negativeness_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_negativeness_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_neutralness_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ai_analysis_neutralness"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/standard_text_size"
+                    android:layout_marginVertical="@dimen/components_margin_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_negativeness" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Theme.ZPI.Text"
+                    android:id="@+id/fragment_read_ai_neutralness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginStart="@dimen/components_margin_tiny"
+                    app:layout_constraintTop_toTopOf="@id/fragment_read_ai_neutralness_label"
+                    app:layout_constraintStart_toEndOf="@id/fragment_read_ai_neutralness_label"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/fragment_read_ai_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_read_avg_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/components_margin"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_ai_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Score: 4/5"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/fragment_read_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_marginTop="@dimen/components_margin"
+            android:theme="@style/Theme.ZPI.RatingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_avg_score" />
+
+        <Button
+            style="@style/Theme.ZPI.Button"
+            android:id="@+id/fragment_read_add_comment_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:layout_marginBottom="@dimen/components_margin_small"
+            android:layout_marginHorizontal="@dimen/components_margin_small"
+            android:text="@string/add_comment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_rating_bar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_read_comments_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin_small"
+            android:layout_marginHorizontal="@dimen/components_margin"
+            app:layoutManager="LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_read_add_comment_button"
+            tools:listitem="@layout/comment_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

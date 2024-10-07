@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.search.SearchFragment">
+
+    <ImageView
+        android:id="@+id/activity_search_back_button"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_margin="@dimen/components_margin_small"
+        android:contentDescription="@string/back"
+        app:srcCompat="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/activity_search_search_view"
+        app:layout_constraintBottom_toBottomOf="@id/activity_search_search_view"/>
+
+    <android.widget.SearchView
+        android:id="@+id/activity_search_search_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/components_margin"
+        android:closeIcon="@drawable/icon_close"
+        android:searchIcon="@drawable/icon_search"
+        app:layout_constraintBottom_toTopOf="@id/short_story_item_list_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_search_back_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/short_story_item_list_search"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/components_margin_small"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_search_search_view"
+        tools:listitem="@layout/short_story_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

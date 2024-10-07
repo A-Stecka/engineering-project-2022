@@ -1,0 +1,29 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_name_size">30sp</dimen>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="author_size">12sp</dimen>
+    <dimen name="standard_text_size">14sp</dimen>
+    <dimen name="label_size">16sp</dimen>
+    <dimen name="dialog_title_size">18sp</dimen>
+    <dimen name="smaller_floating_button_scale">0.85</dimen>
+    <dimen name="image_large">200dp</dimen>
+    <dimen name="image_regular">150dp</dimen>
+    <dimen name="image_small">100dp</dimen>
+    <dimen name="input_horizontal_margin">25dp</dimen>
+    <dimen name="input_content_height">1000dp</dimen>
+    <dimen name="input_comment_height">300dp</dimen>
+    <dimen name="components_margin_big">50dp</dimen>
+    <dimen name="components_margin_list_indented">70dp</dimen>
+    <dimen name="components_margin_very_big">100dp</dimen>
+    <dimen name="components_margin">20dp</dimen>
+    <dimen name="components_margin_small">10dp</dimen>
+    <dimen name="components_margin_tiny">5dp</dimen>
+    <dimen name="profile_content_margin_text">55dp</dimen>
+    <dimen name="dialog_change_name_margin">3.5dp</dimen>
+    <dimen name="picture_grid_vertical_spacing">30dp</dimen>
+    <dimen name="column_width">80dp</dimen>
+    <dimen name="dialog_text_size">16sp</dimen>
+    <dimen name="leaderboard_column">60dp</dimen>
+</resources>

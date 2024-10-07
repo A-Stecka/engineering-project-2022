@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FFFFFFFF</color>
+    <color name="status_bar">#FFE5E5E5</color>
+    <color name="navigation_bar">#FFFFFFFF</color>
+    <color name="input_normal">#FF727272</color>
+    <color name="text">#FF191919</color>
+    <color name="text_button">#FFFFFFFF</color>
+    <color name="text_label">#FF4D9385</color>
+    <color name="text_input">#FF373737</color>
+    <color name="text_info">#FF727272</color>
+    <color name="dialog_title">#FFA84551</color>
+    <color name="app_name">#FF4F1F15</color>
+    <color name="primary">#FF4D9385</color>
+    <color name="primary_variant">#FF4D9385</color>
+    <color name="color_on_primary">#FFFFFFFF</color>
+    <color name="secondary">#FFFFD1C1</color>
+    <color name="secondary_variant">#FFFFECE6</color>
+
+    <color name="almost_black">#FF191919</color>
+    <color name="black">#FF000000</color>
+    <color name="almost_white">#FFFEFEFE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_light">#FFBABABA</color>
+    <color name="gray">#FF727272</color>
+    <color name="gray_dark">#FF373737</color>
+    <color name="teal_light">#FF76B7AA</color>
+    <color name="teal">#FF4D9385</color>
+    <color name="teal_dark">#FF21403A</color>
+    <color name="wine_light">#FFA84551</color>
+    <color name="wine">#FF722F37</color>
+    <color name="wine_dark">#FF3C191D</color>
+    <color name="rose_light">#FFFFECE6</color>
+    <color name="rose">#FFFFD1C1</color>
+    <color name="rose_dark">#FFB27763</color>
+    <color name="brown">#FF4F1F15</color>
+</resources>

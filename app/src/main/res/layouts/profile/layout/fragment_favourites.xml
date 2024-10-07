@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.profile.FavouritesFragment">
+
+    <ImageView
+        android:id="@+id/fragment_favourites_back_button"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_marginTop="@dimen/components_margin"
+        android:layout_marginBottom="@dimen/components_margin_small"
+        android:layout_marginHorizontal="@dimen/components_margin_small"
+        android:contentDescription="@string/back"
+        app:srcCompat="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/Theme.ZPI.TextLabelBig"
+        android:id="@+id/fragment_favourites_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favourites_label"
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginHorizontal="@dimen/components_margin_small"
+        app:layout_constraintTop_toTopOf="@id/fragment_favourites_back_button"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_favourites_back_button"
+        app:layout_constraintStart_toEndOf="@id/fragment_favourites_back_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/short_story_item_list_favourites"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/components_margin_small"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_favourites_back_button"
+        tools:listitem="@layout/short_story_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

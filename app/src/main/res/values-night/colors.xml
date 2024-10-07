@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FF191919</color>
+    <color name="status_bar">#FF373737</color>
+    <color name="navigation_bar">#FF191919</color>
+    <color name="input_normal">#FFBABABA</color>
+    <color name="text">#FFFFFFFF</color>
+    <color name="text_button">#FF191919</color>
+    <color name="text_label">#FFFFD1C1</color>
+    <color name="text_input">#FFFEFEFE</color>
+    <color name="text_info">#FFBABABA</color>
+    <color name="dialog_title">#FFFFD1C1</color>
+    <color name="app_name">#FF4D9385</color>
+    <color name="primary">#FFFFD1C1</color>
+    <color name="primary_variant">#FFFFECE6</color>
+    <color name="color_on_primary">#FF191919</color>
+    <color name="secondary">#FF76B7AA</color>
+    <color name="secondary_variant">#FF21403A</color>
+</resources>

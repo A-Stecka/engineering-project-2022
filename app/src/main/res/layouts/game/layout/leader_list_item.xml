@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/leader_list_item_position"
+        android:layout_width="@dimen/leaderboard_column"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/components_margin_tiny"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/leader_list_item_name"
+        tools:text="@string/place_label" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/leader_list_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leader_list_item_position"
+        app:layout_constraintEnd_toStartOf="@id/leader_list_item_score"
+        tools:text="@string/user_label" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/leader_list_item_score"
+        android:layout_width="@dimen/leaderboard_column"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/components_margin_tiny"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/leader_list_item_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@string/score_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

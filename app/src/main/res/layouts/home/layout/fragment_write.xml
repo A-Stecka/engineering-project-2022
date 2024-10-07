@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.home.WriteFragment">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/fragment_write_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_write_elements"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/fragment_write_back_button"
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:layout_marginTop="@dimen/components_margin"
+            android:layout_marginBottom="@dimen/components_margin_small"
+            android:layout_marginHorizontal="@dimen/components_margin_small"
+            android:contentDescription="@string/back"
+            app:srcCompat="@drawable/icon_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Theme.ZPI.TextLabelBig"
+            android:id="@+id/fragment_write_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/write_label"
+            android:layout_marginBottom="2.5dp"
+            android:layout_marginHorizontal="@dimen/components_margin_small"
+            app:layout_constraintTop_toTopOf="@id/fragment_write_back_button"
+            app:layout_constraintBottom_toBottomOf="@id/fragment_write_back_button"
+            app:layout_constraintStart_toEndOf="@id/fragment_write_back_button" />
+
+        <TextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_write_info_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/challenge_info"
+            android:textAlignment="center"
+            android:layout_marginHorizontal="@dimen/input_horizontal_margin"
+            android:layout_marginVertical="@dimen/components_margin"
+            app:layout_constraintTop_toBottomOf="@id/fragment_write_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            style="@style/Theme.ZPI.TextTitle"
+            android:id="@+id/fragment_write_label_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genre_label"
+            android:layout_marginStart="@dimen/input_horizontal_margin"
+            android:layout_marginVertical="@dimen/components_margin_small"
+            app:layout_constraintTop_toBottomOf="@id/fragment_write_info_text"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_write_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_size"
+            android:layout_marginEnd="@dimen/input_horizontal_margin"
+            app:layout_constraintTop_toTopOf="@id/fragment_write_label_genre"
+            app:layout_constraintLeft_toLeftOf="@id/fragment_write_prompt"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            style="@style/Theme.ZPI.TextTitle"
+            android:id="@+id/fragment_write_label_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_label"
+            android:layout_marginStart="@dimen/input_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/fragment_write_label_genre"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            style="@style/Theme.ZPI.Text"
+            android:id="@+id/fragment_write_prompt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/title_size"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="@dimen/input_horizontal_margin"
+            app:layout_constraintTop_toTopOf="@id/fragment_write_label_prompt"
+            app:layout_constraintLeft_toRightOf="@id/fragment_write_label_prompt"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Theme.ZPI.TextInputLayout"
+            android:id="@+id/fragment_write_layout_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="@dimen/input_horizontal_margin"
+            app:layout_constraintTop_toBottomOf="@id/fragment_write_prompt"
+            app:layout_constraintBottom_toTopOf="@id/fragment_write_layout_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_write_input_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:gravity="top"
+                android:hint="@string/title" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Theme.ZPI.TextInputLayout"
+            android:id="@+id/fragment_write_layout_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/input_horizontal_margin"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/fragment_write_layout_title"
+            app:layout_constraintBottom_toTopOf="@id/fragment_write_publish_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Theme.ZPI.Text"
+                android:id="@+id/fragment_write_input_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/input_content_height"
+                android:gravity="top"
+                android:hint="@string/content"
+                android:inputType="text|textMultiLine" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            style="@style/Theme.ZPI.Button"
+            android:id="@+id/fragment_write_publish_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/publish_button"
+            android:layout_marginTop="@dimen/components_margin_small"
+            android:layout_marginBottom="@dimen/components_margin_tiny"
+            android:enabled="false"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragment_write_layout_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

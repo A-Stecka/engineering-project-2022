@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.community.CommunityFragment">
+
+    <android.widget.SearchView
+        android:id="@+id/search_widget_community"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:searchIcon="@drawable/icon_search"
+        android:closeIcon="@drawable/icon_close"
+        android:layout_marginTop="@dimen/components_margin"
+        app:layout_constraintBottom_toTopOf="@id/short_story_item_list_community"
+        app:layout_constraintEnd_toStartOf="@id/filter_frame"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filter_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toEndOf="@id/search_widget_community"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_widget_community"
+        app:layout_constraintBottom_toBottomOf="@id/search_widget_community">
+
+        <ImageView
+            android:id="@+id/filter_button"
+            android:layout_width="36sp"
+            android:layout_height="36sp"
+            android:layout_marginEnd="@dimen/components_margin_small"
+            android:contentDescription="@string/genres"
+            app:srcCompat="@drawable/icon_filter"
+            app:layout_constraintStart_toEndOf="@id/filter_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/Theme.ZPI.TextLabel"
+            android:id="@+id/filter_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/filter_label"
+            android:layout_marginEnd="@dimen/components_margin"
+            android:textColor="@color/text_info"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filter_button"
+            app:layout_constraintBottom_toBottomOf="@id/filter_button"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:id="@+id/categories_community"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/short_story_item_list_community"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_widget_community" >
+    </TableLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/short_story_item_list_community"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginVertical="@dimen/components_margin_small"
+        app:layoutManager="LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categories_community"
+        tools:listitem="@layout/short_story_item" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/no_stories_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/components_margin_small"
+        android:layout_marginHorizontal="@dimen/components_margin"
+        android:text="@string/no_stories_community"
+        android:textAlignment="center"
+        android:justificationMode="inter_word"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categories_community" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.ZPI" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorAccent">@color/rose</item>
+        <item name="android:colorAccent">@color/gray</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/status_bar</item>
+        <item name="android:navigationBarColor">@color/navigation_bar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="Theme.ZPI.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ZPI.GoogleButton">
+        <item name="android:drawableLeft">@drawable/icon_google</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@color/almost_white</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginHorizontal">@dimen/input_horizontal_margin</item>
+    </style>
+
+    <style name="Theme.ZPI.BottomNav">
+        <item name="android:fontFamily">@font/alata</item>
+    </style>
+
+    <style name="Theme.ZPI.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/text_button</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:layout_marginHorizontal">@dimen/input_horizontal_margin</item>
+    </style>
+
+    <style name="Theme.ZPI.Text">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">@dimen/standard_text_size</item>
+        <item name="android:lineSpacingExtra">@dimen/components_margin_tiny</item>
+    </style>
+
+    <style name="Theme.ZPI.TextLabel">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">@dimen/label_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.ZPI.TextLabelBig">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.ZPI.TextTitle">
+        <item name="android:textColor">@color/text_label</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Theme.ZPI.TextAuthor">
+        <item name="android:textColor">@color/text_label</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">@dimen/author_size</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Theme.ZPI.AppName">
+        <item name="android:textColor">@color/app_name</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textSize">@dimen/app_name_size</item>
+    </style>
+
+    <style name="Theme.ZPI.TextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginHorizontal">@dimen/input_horizontal_margin</item>
+        <item name="android:textColor">@color/text_input</item>
+        <item name="boxStrokeColor">@color/text_input_layout</item>
+    </style>
+
+    <style name="Theme.ZPI.Icon">
+        <item name="android:layout_marginStart">@dimen/components_margin</item>
+        <item name="android:tint">@color/text_label</item>
+    </style>
+
+    <style name="Theme.ZPI.RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/input_normal</item>
+        <item name="colorControlActivated">@color/secondary</item>
+    </style>
+
+    <style name="Theme.ZPI.ChipText" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">@dimen/standard_text_size</item>
+        <item name="android:fontFamily">@font/alata</item>
+        <item name="android:textColor">@color/text</item>
+    </style>
+
+    <style name="Theme.ZPI.Chip">
+        <item name="android:textAppearance">@style/Theme.ZPI.ChipText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:backgroundTint">@color/chip_button_clickable</item>
+    </style>
+
+</resources>

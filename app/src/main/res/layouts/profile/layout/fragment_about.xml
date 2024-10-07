@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.profile.AboutFragment">
+
+    <ImageView
+        android:id="@+id/fragment_about_back_button"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_marginTop="@dimen/components_margin"
+        android:layout_marginBottom="@dimen/components_margin_small"
+        android:layout_marginHorizontal="@dimen/components_margin_small"
+        android:contentDescription="@string/back"
+        app:srcCompat="@drawable/icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/Theme.ZPI.TextLabelBig"
+        android:id="@+id/fragment_about_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_app"
+        android:layout_marginBottom="2.5dp"
+        android:layout_marginHorizontal="@dimen/components_margin_small"
+        app:layout_constraintTop_toTopOf="@id/fragment_about_back_button"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_about_back_button"
+        app:layout_constraintStart_toEndOf="@id/fragment_about_back_button" />
+
+    <ImageView
+        android:id="@+id/fragment_about_app_icon"
+        android:layout_width="@dimen/image_regular"
+        android:layout_height="@dimen/image_regular"
+        android:contentDescription="@string/app_icon_desc"
+        android:layout_marginVertical="@dimen/components_margin"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/app_icon" />
+
+    <TextView
+        style="@style/Theme.ZPI.AppName"
+        android:id="@+id/fragment_about_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBaseline_toBottomOf="@id/fragment_about_app_icon" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/fragment_about_section_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/components_margin"
+        android:text="@string/about_section_1"
+        android:justificationMode="inter_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_app_name" />
+
+    <TextView
+        style="@style/Theme.ZPI.TextLabel"
+        android:id="@+id/fragment_about_team_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/components_margin_small"
+        android:layout_marginHorizontal="@dimen/components_margin"
+        android:text="@string/team_label"
+        android:textColor="@color/text_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_section_1" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/fragment_about_team_member_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/components_margin_big"
+        android:layout_marginTop="@dimen/components_margin_tiny"
+        android:text="@string/team_member_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_team_label" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/fragment_about_team_member_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/components_margin_big"
+        android:layout_marginTop="@dimen/components_margin_tiny"
+        android:text="@string/team_member_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_team_member_1" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/fragment_about_team_member_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/components_margin_big"
+        android:layout_marginTop="@dimen/components_margin_tiny"
+        android:text="@string/team_member_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_team_member_2" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/fragment_about_team_member_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/components_margin_big"
+        android:layout_marginTop="@dimen/components_margin_tiny"
+        android:text="@string/team_member_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_team_member_3" />
+
+    <TextView
+        style="@style/Theme.ZPI.Text"
+        android:id="@+id/fragment_about_section_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/components_margin"
+        android:layout_marginTop="@dimen/components_margin_small"
+        android:text="@string/about_section_2"
+        android:justificationMode="inter_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_team_member_4" />
+
+    <TextView
+        style="@style/Theme.ZPI.AppName"
+        android:id="@+id/fragment_about_thanks_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/components_margin"
+        android:text="@string/thanks_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_about_section_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

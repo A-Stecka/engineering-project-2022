@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/components_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/image_regular"
+            android:layout_height="@dimen/image_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Theme.ZPI.TextTitle"
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginTop="@dimen/components_margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+        <FrameLayout
+            android:id="@+id/favourites_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="@dimen/components_margin_list_indented"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_text">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/favourite_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_favourites_full"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/favourites_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/favourites"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/statistics_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/favourites_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/statistics_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_statistics"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/statistics_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/statistics"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_picture_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/statistics_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/change_picture_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_profile_picture"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/change_picture_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_picture"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_name_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/change_picture_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/change_name_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_username"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/change_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_name"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_password_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/change_name_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/change_password_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_password"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/change_password_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_password"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/change_email_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/change_password_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/change_email_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_email"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/change_email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change_email"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/about_app_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/change_email_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/about_app_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_info"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/about_app_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_app"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/help_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_app_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/help_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_help"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/help_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/log_out_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/components_margin"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/help_frame">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                style="@style/Theme.ZPI.Icon"
+                android:id="@+id/log_out_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_logout"
+                android:layout_gravity="start" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/Theme.ZPI.TextLabel"
+                android:id="@+id/log_out_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_out"
+                android:layout_marginStart="@dimen/profile_content_margin_text"
+                android:layout_gravity="center_vertical"/>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
