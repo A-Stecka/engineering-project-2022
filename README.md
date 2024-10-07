@@ -18,6 +18,8 @@ Each story is checked for correct spelling. Additionally, each text is classifie
 A generative approach is used to generate stories for the minigame.
 To allow for communication between the database and applications an API was designed and implemented in Python.
 
+The database and API were deployed with Heroku.
+
 The main branch contains the project documentation. The mobile app can be found in the mobile_app branch. The api branch contains the Python API.
 -
 The project was completed in collaboration with [A. Kłobus](https://github.com/AgnieszkaKlobus12).  
