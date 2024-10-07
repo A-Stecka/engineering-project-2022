@@ -1,0 +1,28 @@
+body {
+    font-family: 'Alata';
+    margin: 0;
+}
+
+.content_center {
+    text-align: center;
+}
+
+.header {
+    width: fit-content;
+    margin: auto;
+    padding-top: 5em;
+}
+
+.header img {
+    width: 20em;
+}
+
+.footer {
+    text-align: center;
+    font-size: 9pt;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.5em 0 0.5em 0;
+    background: #BABABA;
+}

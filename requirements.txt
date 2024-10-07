@@ -1,0 +1,8 @@
+Flask==2.0.2
+pyodbc>=4.0.32
+pydantic>=1.8.2
+gunicorn==19.0.0
+psycopg2>=2.7
+numpy~=1.23.4
+matplotlib~=3.6.1
+requests
