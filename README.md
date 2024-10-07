@@ -1,5 +1,5 @@
 # Team Engineering Project - wr(a)ite
-Mobile application for the development of writing skills using artificial intelligence for text creation and analysis created as part of the Team Engineering Project course. The Team Engineering Project constituted the final engineering project.
+Mobile application for the development of writing skills using artificial intelligence for text creation and analysis created as part of the Team Engineering Project course. The Team Engineering Project constituted the final project at the end of my engineering degree.
 -
 The goal of this project was to develop a mobile application that enables users to enhance their literary skills.
 It serves as an accessible tool to encourage the regular development of a writing hobby by suggesting challenges and offering the ability to compete with others. 
